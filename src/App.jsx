@@ -1,13 +1,25 @@
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import Registragion from "./pages/registration";
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route path="/" element={<Registragion />}></Route>
+    </Route>
+  )
+);
 
 function App() {
-  
-
   return (
     <>
-      <h1>hello</h1>
+      <RouterProvider router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
